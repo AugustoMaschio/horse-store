@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Arreios</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>
+                <a href="#">Horse Store</a>
+            </h1>
+            <form>
+                <input type="search" placeholder="Buscar" aria-label="Buscar produtos">
+                <button type="button">Pesquisar</button>
+            </form>
+        </div>
+        <div class="botao-menu">
+            <button type="button">Menu</button>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="menu">
+                    <li>
+                        <a href="#">Selas</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Selas Infantis e Pôneis</a>
+                            </li>
+                            <li>
+                                <a href="#">Selas Americanas</a>
+                            </li>
+                            <li>
+                                <a href="#">Selas Especiais</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Arreios</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="#">Arreios de Montaria</a>
+                            </li>
+                            <li>
+                                <a href="#">Charrete e Carroça</a>
+                            </li>
+                            <li>
+                                <a href="#">Polegadas</a>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section id="sobre">
+                    <div class="about">
+                        <div class="about_img">
+                            <img src="./imagens/fachada-da-loja.png" alt="Fachada da loja Horse Store especializada em arreios">
+                        </div>
+                        <div class="about_text">
+                            <h2>Sobre a Loja</h2>
+                            <p>A Horse Store é uma loja especializada em arreios e equipamentos para montaria, oferecendo produtos de qualidade para cavaleiros de todos os níveis. Nosso objetivo é proporcionar conforto, segurança e durabilidade tanto para o cavalo quanto para quem monta.</p>
+                            <p>Trabalhamos com diferentes modelos de selas e arreios, desde opções para iniciantes até equipamentos mais robustos para uso diário e atividades rurais. Valorizamos materiais resistentes e um bom acabamento, garantindo produtos confiáveis para quem vive o dia a dia no campo.</p>
+                        </div>
+                    </div>
+            </section>
+            <section id="produtos">
+                <h2>Produtos</h2>
+                <div class="products-grid">
+                    <article>
+                        <h3>Sela Americana</h3>
+                        <img src="./imagens/sela-americana.webp" alt="Sela americana de montaria">
+                        <p class="price">R$ 1.850,00</p>
+                        <p>Ideal para montaria com conforto, estabilidade e acabamento reforçado em couro sintético.</p>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article>
+                        <h3>Sela Infantil</h3>
+                        <img src="./imagens/sela-americana-infantil.webp" alt="Sela infantil para montaria">
+                        <p class="price">R$ 950,00</p>
+                        <p>Modelo leve e seguro, desenvolvido para pôneis e para iniciar crianças na montaria.</p>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article>
+                        <h3>Arreio de Montaria</h3>
+                        <img src="./imagens/arreio-campista.webp" alt="Arreio de montaria em couro">
+                        <p class="price">R$ 1.440,00</p>
+                        <p>Conjunto resistente para uso diário, com bom ajuste e conforto para cavalo e cavaleiro.</p>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                    <article>
+                        <h3>Arreio para Charrete</h3>
+                        <img src="./imagens/arreio-para-charrete.webp" alt="Arreio para charrete">
+                        <p class="price">R$ 835,00</p>
+                        <p>Estrutura reforçada para tração leve, com peças pensadas para segurança e durabilidade.</p>
+                        <button type="button">Adicionar ao carrinho</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; 2026 Horse Store - Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('.botao-menu button').click(function() {
+                $('.menu').slideToggle();
+            })
+        })
+        $(window).resize(function() {
+            if ($(window).width() > 640) {
+                $('.menu').removeAttr('style');
+            }
+        });
+    </script>
+</body>
+</html>
